@@ -1,5 +1,3 @@
-![liblove logo](/docs/images/liblove.png)
-
 # liblove
 Give your python libraries some love <3
 
@@ -31,7 +29,7 @@ pip install -r requirements.txt
 ```
 
 ## Demonstration
-![Demo](./docs/examples/demo.svg)
+![Demo](./docs/example/demo.svg)
 
 ## To-Do
 As you can see it is a simple script. I mainly want to see how I can implement oauth. If anyone would want to do it feel free to do so.
