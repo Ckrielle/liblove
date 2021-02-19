@@ -12,7 +12,8 @@ Give your python libraries some love <3
 
 ## Gerenal Info
 **Purpose**: This project goes to all the python libraries that carries our projects, the silver linings of endless google searches. After we download them
-we forget them and never care about them. This is what liblove fixes. It gives them some love <3
+we forget them and never care about them. This is what liblove fixes. It goes to very single one of their github repos (if they have one) and stars them. It gives them 
+some love <3
 
 **How**: You need a username to access a repo with the github API. So I had to find a way to get the username to make the request. Luckily I was on pypi at that time,
 and observed that their url is of the for pypi.org/project/*project*. The script gets every library you have in tour system, sends a request to pypi, takes the 
