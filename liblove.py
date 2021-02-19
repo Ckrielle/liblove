@@ -10,7 +10,7 @@ BLUE = '\033[34m'
 END = '\033[0m'
 
 
-token = "09622914ee1010b60829b3295374370c6f7fad9b"
+token = "ADD TOKEN HERE"
 installed_packages = pkg_resources.working_set
 installed_packages_list = sorted([f"{i.key}" for i in installed_packages])
 length = len(installed_packages_list)
@@ -31,8 +31,11 @@ with alive_bar(length, enrich_print=False) as bar:
                 }
                 star = "https://api.github.com/user/starred/" + repo
                 put_r = requests.put(star, headers=headers)
-                if put_r.status_code == 204:
+                status = put_r.status_code
+                if status == 204:
                     print("{1}Gave a {4}{2}★ STAR {4}{1}to {4}{2}{0}{4}{3} <3{4}".format(package, BLUE, YELLOW, RED, END))
+                elif status == 401:
+                    print(f"{RED}UNAUTHORIZED ACCESS CHECK YOUR TOKEN{END}")
             else:
                 print("{2}{0}{4}{1} doesn't have a repo {4}{3}:({4}".format(package, BLUE, YELLOW, RED, END))
         else:
