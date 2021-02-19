@@ -15,6 +15,7 @@ installed_packages = pkg_resources.working_set
 installed_packages_list = sorted([f"{i.key}" for i in installed_packages])
 length = len(installed_packages_list)
 
+
 with alive_bar(length, enrich_print=False) as bar:
     for package in installed_packages_list:
         url = "https://pypi.org/project/" + package
